@@ -18,9 +18,6 @@ import useVersionCheck from "./hooks/useVersionCheck"
 import { settingsState } from "./store/settingsState"
 import { GITHUB_REPO_PATH } from "./utils/constants"
 import hideSpinner from "./utils/loading"
-// 获取 Package.json 版本号
-import packageJson from "./package.json"
-const version = packageJson.version
 
 const localMap = {
   "de-DE": deDE,
@@ -32,7 +29,6 @@ const localMap = {
 const getLocale = (language) => localMap[language] || enUS
 
 const App = () => {
-  console.log(`current version：${version}`);
   useLanguage()
   useTheme()
   useFeedIconsSync()

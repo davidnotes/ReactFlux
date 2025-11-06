@@ -11,7 +11,7 @@ import unicorn from "eslint-plugin-unicorn"
 
 export default [
   {
-    ignores: ["build", "dev-dist"],
+    ignores: ["build", "dev-dist", "node_modules"],
   },
   js.configs.recommended,
   unicorn.configs.recommended,
